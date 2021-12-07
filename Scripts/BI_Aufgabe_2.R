@@ -11,7 +11,7 @@ library("party")
 library("rgl")
 
 # Change path for read
-smartBuildDataFrame <- read_csv("~/Scripts/SmartBuild.csv")
+smartBuildDataFrame <- read_csv("~/Data/SmartBuild.csv")
 
 # Result
 # Rows: 10000 Columns: 14                                                       
