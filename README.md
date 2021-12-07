@@ -21,5 +21,9 @@
     Create the Project as a subsidiary of: Gebe hier den Pfad zu deinem Lokalen Speicherort an<br>
     Klicke auf  | Create Project |
     ![image](https://user-images.githubusercontent.com/64785342/145043155-82341640-28de-45ef-940a-d15019b7f984.png)
-
     
+    
+<h2> Package Managing </h2>
+Die verwendeten Packages sind in dem Dokument ```Package_Managing.R``` zu finden.<br>
+Bevor man den restlichen Code ausprobieren kann muss man dieses Skript einmal durchlaufen lassen. <br>
+<b>Solltest du einen neue Library verwenden wollen füge diese bitte zuerst in ```Package_Managing.R``` hinzu!</b>
