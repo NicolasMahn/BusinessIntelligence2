@@ -16,7 +16,7 @@
 2. Repository klonen
     Gehe in R Studio in der Menu Leiste oben links auf File > NewProject > Version Control > Git.<br>
     Fülle die Zeilen ensprechend aus:<br>
-    Repository URL: ```https://github.com/NicolasMahn/BusinessIntelligence2.git```<br>
+    Repository URL: ```https://github.com/NicolasMahn/BusinessIntelligence2```<br>
     Project Directory Name: ```BusinessIntelligence2.git```<br>
     Create the Project as a subsidiary of: Gebe hier den Pfad zu deinem Lokalen Speicherort an<br>
     Klicke auf  | Create Project |
