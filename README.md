@@ -2,7 +2,7 @@
 
 <h2> Installation </h2>
 
-1. Git Installieren<br>
+<b>1. Git Installieren</b><br>
     Teste ob git schon installiert ist. Öffne dafür das Terminal in R Studio und gebe folgende Befehle ein:<br>
       ```shell
       which git
@@ -13,7 +13,7 @@
     <br><br>
     Sollte Git bei dir nicht installiert sein findest du <a href=https://happygitwithr.com/install-git.html>hier</a> eine Anleitung
     <br><br><br>
-2. Repository Klonen<br>
+<b>2. Repository Klonen</b><br>
     Gehe in R Studio in der Menu Leiste oben links auf File > NewProject > Version Control > Git.<br>
     Fülle die Zeilen ensprechend aus:<br>
     Repository URL: ```https://github.com/NicolasMahn/BusinessIntelligence2.git```<br>
