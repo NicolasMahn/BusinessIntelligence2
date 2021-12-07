@@ -1,12 +1,12 @@
 # Comment out when package is not installed
-# install.packages("readr")
-# install.packages("RCOR")
-# install.packages("party")
-# install.packages("rgl")
+install.packages("readr")
+install.packages("ROCR")
+install.packages("party")
+install.packages("rgl")
 
 # Libraries
 library("readr")
-library("RCOR")
+library("ROCR")
 library("party")
 library("rgl")
 
