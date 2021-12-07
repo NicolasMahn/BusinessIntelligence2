@@ -24,6 +24,6 @@
     
     
 <h2> Package Managing </h2>
-Die verwendeten Packages sind in dem Dokument ```Package_Managing.R``` zu finden.<br>
+Die verwendeten Packages sind in dem Dokument <i>Package_Managing.R</i> zu finden.<br>
 Bevor man den restlichen Code ausprobieren kann muss man dieses Skript einmal durchlaufen lassen. <br>
-<b>Solltest du einen neue Library verwenden wollen füge diese bitte zuerst in ```Package_Managing.R``` hinzu!</b>
+<b>Solltest du einen neue Library verwenden wollen füge diese bitte zuerst in <i>Package_Managing.R</i> hinzu!</b>
