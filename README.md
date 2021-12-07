@@ -2,7 +2,7 @@
 
 <h2> Installation </h2>
 
-1. Git Installieren
+1. Git Installieren<br>
     Teste ob git schon installiert ist. Öffne dafür das Terminal in R Studio und gebe folgende Befehle ein:<br>
       ```shell
       which git
