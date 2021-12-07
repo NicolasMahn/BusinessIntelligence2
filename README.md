@@ -13,5 +13,13 @@
     <br><br>
     Sollte Git bei dir nicht installiert sein findest du <a href=https://happygitwithr.com/install-git.html>hier</a> eine Anleitung
     <br><br><br>
-2. 
+2. Repository klonen
+    Gehe in R Studio in der Menu Leiste oben links auf File > NewProject > Version Control > Git.<br>
+    Fülle die Zeilen ensprechend aus:<br>
+    Repository URL: ```shell https://github.com/NicolasMahn/BusinessIntelligence2.git```<br>
+    Project Directory Name: ```shell BusinessIntelligence2.git```<br>
+    Create the Project as a subsidiary of: Gebe hier den Pfad zu deinem Lokalen Speicherort an
+    
+    ![image](https://user-images.githubusercontent.com/64785342/145043155-82341640-28de-45ef-940a-d15019b7f984.png)
+
     
