@@ -19,7 +19,7 @@
     Repository URL: ```https://github.com/NicolasMahn/BusinessIntelligence2.git```<br>
     Project Directory Name: ```BusinessIntelligence2```<br>
     Create the Project as a subsidiary of: Gebe hier den Pfad zu deinem Lokalen Speicherort an<br>
-    Klicke auf  | Create Project |
+    Klicke auf  | Create Project |<br>
     ![image](https://user-images.githubusercontent.com/64785342/145043155-82341640-28de-45ef-940a-d15019b7f984.png)
     
     
