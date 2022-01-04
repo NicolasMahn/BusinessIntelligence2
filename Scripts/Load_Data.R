@@ -37,7 +37,7 @@ loadData <-function(seed = 42, trainPortion = 0.8) {
   # set Seed
   set.seed(seed)
   
-  # Split into train (80%) and test data (20%)
+  # Split into train and test data (default is 80%/20%)
   selectIndex <- sample(1:nrow(smartBuildDataFrame), size=round(trainPortion*nrow(smartBuildDataFrame)))
   trainData <<- smartBuildDataFrame[selectIndex, ]
   print("The training dataframe can be found under 'trainData'")

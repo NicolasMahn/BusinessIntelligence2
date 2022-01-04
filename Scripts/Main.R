@@ -19,7 +19,6 @@ main <-function() {
   #Load Data into Global Variables
   loadData()
   
-  
   #Execute 
   print("Execute functions with 'qx()' (ex. for Q1 'q1()') ")
 
