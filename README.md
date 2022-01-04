@@ -1,7 +1,5 @@
 # BusinessIntelligence2
 
-# Goal 1.0
-
 ## Installation
 
 **1. Git Installieren**  
