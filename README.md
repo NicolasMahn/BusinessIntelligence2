@@ -1,5 +1,8 @@
 # BusinessIntelligence2
 
+##Projekttabelle
+[Klicke hier um zur Projekttabelle zu kommen](https://github.com/NicolasMahn/BusinessIntelligence2/projects/1)
+
 ## Installation
 
 **1. Git Installieren**  
