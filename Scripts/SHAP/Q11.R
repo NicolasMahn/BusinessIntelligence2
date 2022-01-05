@@ -1,8 +1,8 @@
-# Question four. SHAP Value for Fehler
+# Question four. SHAP Value for Ionisationsfaktor
 
 q4 <- function() {
   
-  print("---START QUESTION 5---")
+  print("---START QUESTION 11---")
   
   require(xgboost)
   require(tidyverse)
@@ -15,7 +15,7 @@ q4 <- function() {
   model = xgboost(data = smartBuildX, 
                   nround = 100, 
                   objective = "reg:linear",
-                  label = smartBuildDataFrame$Fehler)
+                  label = smartBuildDataFrame$Ionisationsfaktor)
   
   shapResults = shap.score.rank(xgb_model = model, 
                                 X_train = smartBuildX,
@@ -40,6 +40,5 @@ q4 <- function() {
                 plot_loess = T # add red line to plot
   )
   
-  print("---END OF QUESTION 5---")
-  
+  print("---END OF QUESTION 11---")
 }

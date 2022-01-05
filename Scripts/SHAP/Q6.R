@@ -1,9 +1,12 @@
-# Question four. SHAP Value for quality
+# Question four. SHAP Value for LScore
 
 q4 <- function() {
   
   print("---START QUESTION 6---")
   
+  require(xgboost)
+  require(tidyverse)
+  require(shapr)
   source(gsub(" ", "", paste(getwd(), "/Scripts/SHAP/shap.R")))
   
   smartBuildDummy = dummyVars( ~ Durchmesser + Hoehe + Gewicht, data=trainData)
