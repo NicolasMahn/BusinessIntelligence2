@@ -65,8 +65,8 @@ plot.shap.summary <- function(data_long){
               hjust = -0.2, 
               fontface = "bold") + # bold
     # # add a "SHAP" bar notation
-    annotate("text", x = -Inf, y = -Inf, vjust = -0.2, hjust = 0, size = 3,
-              label = expression(group("|", bar(SHAP), "|"))) + 
+    # annotate("text", x = -Inf, y = -Inf, vjust = -0.2, hjust = 0, size = 3,
+    #          label = expression(group("|", bar(SHAP), "|"))) + 
     scale_color_gradient(low="#FFCC33", high="#6600CC", 
                          breaks=c(0,1), labels=c("Low","High")) +
     theme_bw() + 
@@ -80,11 +80,6 @@ plot.shap.summary <- function(data_long){
     labs(y = "SHAP value (impact on model output)", x = "", color = "Feature value") 
   return(plot1)
 }
-
-
-
-
-
 
 var_importance <- function(shap_result, top_n=10)
 {
