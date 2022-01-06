@@ -19,7 +19,7 @@ table (Vorhergesagt = results, Tatsaechlich = testData$LScore)
 accuracy <- sum (results == testData$LScore) / nrow(testData)
 accuracy
 #[1] 0.9325
-#Unter
+#Unter _
 #Prüfen Sie, auf welcher Basis Ihre Modelle die Prognose erzeugen
 
 # Auf Grundlage Gewicht, Hoehe und Durchmesser die Prognose erzeugt. 
