@@ -1,8 +1,20 @@
-Aufgabe 2:
-Erläutern Sie die von Ihnen zur Datenanalyse genutzten Konzepte
+#Aufgabe 2:
+#Erläutern Sie die von Ihnen zur Datenanalyse genutzten Konzepte
 
-Evaluieren und prüfen Sie Ihre Ergebnisse
+#Hier wurde das DecisionTree Model genutzt:
+  
+treeModel <- ctree (Fehler ~ Gewicht+Hoehe+Durchmesser, trainData)
+plot(treeModel)
+table (Vorhergesagt = results, Tatsaechlich = testData$LScore)
 
-Prüfen Sie, auf welcher Basis Ihre Modelle die Prognose erzeugen
 
-Anmerkung: Ggf. können Sie auch zeigen, dass keine gute Vorhersage (mit den von uns behandelten Modellen)möglich ist.
+#Evaluieren und prüfen Sie Ihre Ergebnisse
+
+accuracy <- sum (results == testData$LScore) / nrow(testData)
+
+#Prüfen Sie, auf welcher Basis Ihre Modelle die Prognose erzeugen
+
+# Auf Grundlage Gewicht, Hoehe und Durchmesser die Prognose erzeugt. 
+# Gewicht ist alleine ausschlaggebend für die Generierung des DecisionTree.
+
+#Anmerkung: Ggf. können Sie auch zeigen, dass keine gute Vorhersage (mit den von uns behandelten Modellen)möglich ist.
