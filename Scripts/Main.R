@@ -1,9 +1,7 @@
 #Everything is executed from here
 
-#To run this in the Console type these two commands
+#To run this command in the console to execute this skript
 #source("Scripts/Main.R")
-#main()
-
 
 
 main <-function() {
@@ -30,3 +28,4 @@ main <-function() {
   
 
 }
+main()

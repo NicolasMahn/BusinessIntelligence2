@@ -3,15 +3,15 @@
 
 #This file will install all necessary packages:
 # <<<<<<< HEAD
-install.packages("readr")
-install.packages("ROCR")
-install.packages("party")
-install.packages("rgl")
-install.packages("xgboost")
-install.packages("shapr")
+#install.packages("readr")
+#install.packages("ROCR")
+#install.packages("party")
+#install.packages("rgl")
+#install.packages("xgboost")
+#install.packages("shapr")
 
-install.packages("tidyverse")
-install.packages("caret")
+#install.packages("tidyverse")
+#install.packages("caret")
 # =======
 loadPackages <- function() {
   
