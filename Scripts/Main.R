@@ -12,14 +12,12 @@ main <-function() {
   source("Scripts/Package_Managing.R")
   source("Scripts/Load_Data.R")
   source("Scripts/Q1.R")
-  
-  # Run first before running Q4 to Q8
-  # source("Scripts/SHAP/shap.R")
-  # source("Scripts/SHAP/Q4.R")
-  # source("Scripts/SHAP/Q5.R")
-  # source("Scripts/SHAP/Q6.R")
-  # source("Scripts/SHAP/Q7.R")
-  # source("Scripts/SHAP/Q8.R")
+  source("Scripts/SHAP/shap.R")
+  source("Scripts/SHAP/Q4.R")
+  source("Scripts/SHAP/Q5.R")
+  source("Scripts/SHAP/Q6.R")
+  source("Scripts/SHAP/Q7.R")
+  source("Scripts/SHAP/Q8.R")
   
   #Load all Packages
   loadPackages()
@@ -30,6 +28,5 @@ main <-function() {
   #Execute 
   print("Execute functions with 'qx()' (ex. for Q1 'q1()') ")
   
-  q1()
 
 }
