@@ -15,9 +15,10 @@ q1 <- function() {
   sqrt(mean(abs(error)))
   
   # Visualization
-  plot(x=sortedTestData$Qualitaet, y=prediction)
+  qualitaet <- sortedTestData$Qualitaet
+  plot(x=qualitaet, y=prediction)
   # Needs to be adjusted
   points(seq(1.0, 2.0), col="red", type = "l")
-  plot3d(prediction, sortedTestData$Qualitaet)
+  #plot3d(prediction, sortedTestData$Qualitaet)
 
 }
