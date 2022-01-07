@@ -28,7 +28,7 @@ loadData <-function(seed = 42, trainPortion = 0.8) {
   smartBuildDataFrame$LScore <- as.factor(smartBuildDataFrame$LScore)
   
   smartBuildDataFrame <<- smartBuildDataFrame
-  print("The entire gataframe can be found under 'smartBuildDataFrame'")
+  print("The entire dataframe can be found under 'smartBuildDataFrame'")
   
   # set Seed
   set.seed(seed)
