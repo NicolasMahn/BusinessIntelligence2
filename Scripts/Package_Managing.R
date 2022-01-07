@@ -2,7 +2,6 @@
 # Last Update: 04.01.2022 18:30
 
 #This file will install all necessary packages:
-# <<<<<<< HEAD
 #install.packages("readr")
 #install.packages("ROCR")
 #install.packages("party")
@@ -12,6 +11,8 @@
 
 #install.packages("tidyverse")
 #install.packages("caret")
+
+
 # =======
 loadPackages <- function() {
   
@@ -34,8 +35,8 @@ loadPackages <- function() {
        FUN = function(x) {
          if (!require(x, character.only = TRUE)) {
              install.packages(x, dependencies = TRUE)
-             library(x, character.only = TRUE)
          }
+         library(x, character.only = TRUE)
        }
    )
   print("---ALL PACKAGES ARE INSTALLED AND LOADED---")

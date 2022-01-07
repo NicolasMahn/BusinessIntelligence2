@@ -1,6 +1,6 @@
 #Everything is executed from here
 
-#To run this command in the console to execute this skript
+#To run this command in the console to execute this Skript
 #source("Scripts/Main.R")
 
 
