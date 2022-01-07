@@ -1,3 +1,4 @@
+
 q1 <- function() {
   #
   # First Approach
@@ -20,5 +21,4 @@ q1 <- function() {
   # Needs to be adjusted
   points(seq(1.0, 2.0), col="red", type = "l")
   #plot3d(prediction, sortedTestData$Qualitaet)
-
 }

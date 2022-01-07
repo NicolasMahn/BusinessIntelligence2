@@ -1,8 +1,8 @@
 #Everything is executed from here
 
 #To run this in the Console type these two commands
-source("Scripts/Main.R")
-main()
+#source("Scripts/Main.R")
+#main()
 
 
 
