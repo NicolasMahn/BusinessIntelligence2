@@ -9,16 +9,23 @@ q1 <- function() {
   sortedTrainData <- trainData[order(trainData$Qualitaet), ]
   
   model <- lm(Qualitaet~Durchmesser+Hoehe+Gewicht, sortedTrainData)
-  prediction <- predict(model, sortedTestData)
+  predictedQualitaet <- predict(model, sortedTestData)
+  qualitaet <- sortedTestData$Qualitaet
   
-  error <- prediction - sortedTestData$Qualitaet
-  mean(abs(error))
-  sqrt(mean(abs(error)))
+  error <- abs(predictedQualitaet - qualitaet)
+  mean(error)
+  sqrt(mean(error))
   
   # Visualization
-  qualitaet <- sortedTestData$Qualitaet
-  plot(x=qualitaet, y=prediction)
-  # Needs to be adjusted
-  points(seq(1.0, 2.0), col="red", type = "l")
-  #plot3d(prediction, sortedTestData$Qualitaet)
+
+  sortedError <- error[order(error)]
+  plot(x=seq(1,length(error),by=1),y=sortedError,
+               xlab="sortierte Abweichungen",
+               ylab="absoluter Abweichungswert",
+               ylim=c(0,0.2),
+               col=pink,
+               type="l")
+  #plot(x=qualitaet, y=predictedQualitaet)
+  #points(seq(1.0, 2.0), col="red", type = "l")
+  
 }

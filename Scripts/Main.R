@@ -9,6 +9,7 @@ main <-function() {
   #Load all Scripts
   source("Scripts/Package_Managing.R")
   source("Scripts/Load_Data.R")
+  source("Scripts/Style.R")
   source("Scripts/Q1.R")
   source("Scripts/SHAP/shap.R")
   source("Scripts/SHAP/Q4.R")
@@ -19,9 +20,14 @@ main <-function() {
   
   #Load all Packages
   loadPackages()
+  loadPackages() 
+  #the first time the script is run it doesn't always load all packages...
   
   #Load Data into Global Variables
   loadData()
+  
+  #Load Style
+  loadStyle()
   
   #Execute 
   print("Execute functions with 'qx()' (ex. for Q1 'q1()') ")
@@ -29,3 +35,4 @@ main <-function() {
 
 }
 main()
+

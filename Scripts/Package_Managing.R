@@ -27,7 +27,9 @@ loadPackages <- function() {
   "xgboost",
   "shapr",
   "tidyverse",
-  "caret"
+  "caret",
+  "extrafont",
+  "remotes"
   )
   
   package.check <- lapply(
@@ -42,3 +44,4 @@ loadPackages <- function() {
   print("---ALL PACKAGES ARE INSTALLED AND LOADED---")
 }
 #>>>>>>> 7100ead48be8003834a41beb4c9ad8fd25aeb000
+
