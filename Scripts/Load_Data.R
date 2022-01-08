@@ -3,10 +3,10 @@ loadData <-function(seed = 42, trainPortion = 0.8) {
   print("---LOADING DATA...---")
   
   # Change path for read
-  smartBuildDataFrame <- read_csv("./Data/SmartBuild.csv")
+  smartBuildDataFrame <- read.csv("./Data/SmartBuild.csv", nrows=9986)
   
   # Result
-  # Rows: 10000 Columns: 14                                                       
+  # Rows: 9986 Columns: 14                                                       
   # -- Column specification ------------------------------------------------------
   #  Delimiter: ","
   # chr  (3): Fehler, XKlasse, LScore
