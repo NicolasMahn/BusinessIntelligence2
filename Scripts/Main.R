@@ -20,7 +20,6 @@ main <-function() {
   
   #Load all Packages
   loadPackages()
-  loadPackages() 
   #the first time the script is run it doesn't always load all packages...
   
   #Load Data into Global Variables

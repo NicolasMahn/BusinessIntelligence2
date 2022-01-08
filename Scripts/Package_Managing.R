@@ -15,7 +15,6 @@
 
 # =======
 loadPackages <- function() {
-  
   print("---INSTALLING AND LOADING PACKAGES...---")
   
   packages <- c(
@@ -39,9 +38,14 @@ loadPackages <- function() {
              install.packages(x, dependencies = TRUE)
          }
          library(x, character.only = TRUE)
+         library(x, character.only = TRUE)
+         #When the Code is executed for the first time on a device the 
+         #libraries sometimes don't load properly, I hope that this fixes it.
+         
        }
    )
   print("---ALL PACKAGES ARE INSTALLED AND LOADED---")
+  
 }
 #>>>>>>> 7100ead48be8003834a41beb4c9ad8fd25aeb000
 
