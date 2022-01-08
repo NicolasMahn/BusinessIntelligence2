@@ -1,0 +1,1 @@
+points3d(dataframe$Durchmesser, dataframe$Hoehe, dataframe$Gewicht)

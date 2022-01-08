@@ -19,13 +19,14 @@ q1 <- function() {
   # Visualization
 
   sortedError <- error[order(error)]
-  plot(x=seq(1,length(error),by=1),y=sortedError,
-               xlab="sortierte Abweichungen",
-               ylab="absoluter Abweichungswert",
-               ylim=c(0,0.2),
-               col=pink,
-               type="l")
-  #plot(x=qualitaet, y=predictedQualitaet)
-  #points(seq(1.0, 2.0), col="red", type = "l")
+  #plot(x=seq(1,length(error),by=1),y=sortedError,
+  #             xlab="sortierte Abweichungen",
+  #             ylab="absoluter Abweichungswert",
+  #             ylim=c(0,0.2),
+  #             col=pink,
+  #             type="l")
+  plot(x=qualitaet, xlab="Qualitaet", 
+       y=predictedQualitaet, ylab="Vorhergesagte Qualitaet", col=turquoise)
+  points(seq(1.0, 2.0), col=pink, type = "l")
   
 }

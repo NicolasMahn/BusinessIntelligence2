@@ -25,11 +25,11 @@ loadStyle <- function(){
   
   par(bg = backgroundColor,
       fg = textColor,
-      col = textColor,
+      col = textColor, pch=20,
       col.axis = textColor, cex.axis = 1,
       col.main = textColor, cex.main = 2,
       col.sub = textColor, cex.sub = 1,
-      col.lab = textColor, cex.lab = 1, 
+      col.lab = textColor, cex.lab = 1,
       lwd = 3,
       bty = "l",
       family = "Bahnschrift")
