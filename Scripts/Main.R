@@ -11,12 +11,12 @@ main <-function() {
   source("Scripts/Load_Data.R")
   source("Scripts/Style.R")
   source("Scripts/Q1.R")
-  source("Scripts/SHAP/shap.R")
-  source("Scripts/SHAP/Q4.R")
-  source("Scripts/SHAP/Q5.R")
-  source("Scripts/SHAP/Q6.R")
-  source("Scripts/SHAP/Q7.R")
-  source("Scripts/SHAP/Q8.R")
+  #source("Scripts/SHAP/shap.R")
+  #source("Scripts/SHAP/Q4.R")
+  #source("Scripts/SHAP/Q5.R")
+  #source("Scripts/SHAP/Q6.R")
+  #source("Scripts/SHAP/Q7.R")
+  #source("Scripts/SHAP/Q8.R")
   
   #Load all Packages
   loadPackages()
