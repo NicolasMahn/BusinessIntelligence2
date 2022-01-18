@@ -3,7 +3,7 @@ loadData <-function(seed = 42, trainPortion = 0.8) {
   print("---LOADING DATA...---")
   
   # Change path for read
-  smartBuildDataFrame <- read.csv("./Data/SmartBuild.csv", nrows=9986)
+  smartBuildDataFrame <- read.csv("./Data/SmartBuild.csv")
   
   # Result
   # Rows: 9986 Columns: 14                                                       

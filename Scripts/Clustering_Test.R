@@ -1,14 +1,18 @@
-points3d(smartBuildDataFrame$Durchmesser, 
+plot3d(smartBuildDataFrame$Durchmesser, 
          smartBuildDataFrame$Hoehe, 
          smartBuildDataFrame$Gewicht)
-axes3d()
 
 
-points3d(smartBuildDataFrame$Durchmesser, 
+max = apply(smartBuildDataFrame[,c(2:4)], 2, max)
+max = apply(smartBuildDataFrame[,c(2:4)], 2, max)
+scaled = as.data.frame(scale(smartBuildDataFrame[,c(2:4)], center = min, scale = max - min))
+
+
+plot3d(smartBuildDataFrame$Durchmesser, 
          smartBuildDataFrame$Hoehe, 
          smartBuildDataFrame$Gewicht, 
          col=as.numeric(smartBuildDataFrame$Fehler))
-axes3d()
+
 sortedByGewicht <- smartBuildDataFrame[order(smartBuildDataFrame$Gewicht),]
 plot(seq(1,length(sortedByGewicht$Gewicht), by= 1), 
      sortedByGewicht$Gewicht, col=as.numeric(sortedByGewicht$Fehler))
@@ -18,18 +22,16 @@ plot(seq(1,length(sortedByGewicht$Gewicht), by= 1),
 
 
 
-points3d(smartBuildDataFrame$Durchmesser, 
+plot3d(smartBuildDataFrame$Durchmesser, 
          smartBuildDataFrame$Hoehe, 
          smartBuildDataFrame$Gewicht, 
          col = as.numeric(smartBuildDataFrame$XKlasse))
-axes3d()
 
 
-points3d(smartBuildDataFrame$Durchmesser, 
+plot3d(smartBuildDataFrame$Durchmesser, 
          smartBuildDataFrame$Hoehe, 
          smartBuildDataFrame$Gewicht, 
          col = as.numeric(smartBuildDataFrame$LScore))
-axes3d()
 sortedByGewicht <- smartBuildDataFrame[order(smartBuildDataFrame$Gewicht),]
 plot(seq(1,length(sortedByGewicht$Gewicht), by= 1), 
      sortedByGewicht$Gewicht, col=as.numeric(sortedByGewicht$LScore))
