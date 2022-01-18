@@ -30,7 +30,8 @@ loadPackages <- function() {
   "extrafont",
   "remotes",
   "rpart",
-  "rpart.plot"
+  "rpart.plot",
+  "randomForest"
   )
   
   package.check <- lapply(

@@ -21,6 +21,6 @@ accuracy
 
 
 tM <- rpart (XKlasse ~ Gewicht+Hoehe+Durchmesser, trainData)
-rpart.plot(tM, type=4, extra = 109,col = textColor, 
+rpart.plot(tM, type=4, extra = 109, col = textColor, 
            branch.col=textColor, split.col = textColor, 
            box.palette = list(pink, orange, turquoise, blue))
