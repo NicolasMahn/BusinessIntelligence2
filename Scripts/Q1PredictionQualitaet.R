@@ -76,7 +76,7 @@ q1ErrorsNachGewicht <- function(){
 }
 
 q1ErrorsNachDurchmesser <- function(){
-  plot(x=seq(1,sortedTestDataByDiameter,by=1),y=errorByDiameter,
+  plot(x=seq(1,length(errorByDiameter),by=1),y=errorByDiameter,
        xlab="sortierte Abweichungen nach Durchmesser",
        ylab="absoluter Abweichungswert",
        ylim=c(0,0.2), col=pink)

@@ -22,7 +22,6 @@ loadStyle <- function(){
     loadfonts(device = "win", quiet = TRUE)
   }
   
-  
   par(bg = backgroundColor,
       fg = textColor,
       col = textColor, pch=20,
@@ -33,7 +32,6 @@ loadStyle <- function(){
       lwd = 3,
       bty = "l",
       family = "Bahnschrift")
-  
   
   print("---STYLE HAS BEEN SET---")
 }

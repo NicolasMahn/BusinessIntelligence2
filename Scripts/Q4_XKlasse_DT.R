@@ -1,8 +1,4 @@
-#Aufgabe 4:
-#XKlasse
-
-#Hier wurde das DecisionTree Model genutzt:
-
+#Aufga
 treeModel <- ctree (XKlasse ~ Gewicht+Hoehe+Durchmesser, trainData)
 # plot(treeModel)
 
@@ -18,6 +14,13 @@ table (Vorhergesagt = results, Tatsaechlich = testData$XKlasse)
 
 accuracy <- sum (results == testData$XKlasse) / nrow(testData)
 accuracy
-# 24.25%
+# 24.25%be 4:
+#XKlasse
 
-plot(treeModel)
+#Hier wurde das DecisionTree Model genutzt:
+
+
+tM <- rpart (XKlasse ~ Gewicht+Hoehe+Durchmesser, trainData)
+rpart.plot(tM, type=4, extra = 109,col = textColor, 
+           branch.col=textColor, split.col = textColor, 
+           box.palette = list(pink, orange, turquoise, blue))

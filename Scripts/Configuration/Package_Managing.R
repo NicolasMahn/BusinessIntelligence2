@@ -28,7 +28,9 @@ loadPackages <- function() {
   "tidyverse",
   "caret",
   "extrafont",
-  "remotes"
+  "remotes",
+  "rpart",
+  "rpart.plot"
   )
   
   package.check <- lapply(
