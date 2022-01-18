@@ -18,6 +18,8 @@ table (Vorhergesagt = results, Tatsaechlich = testData$LScore)
 
 accuracy <- sum (results == testData$LScore) / nrow(testData)
 accuracy
+
+plot(treeModel)
 #[1] 0.9325
 #Unter _x
 #Prüfen Sie, auf welcher Basis Ihre Modelle die Prognose erzeugen

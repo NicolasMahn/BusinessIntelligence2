@@ -67,7 +67,7 @@ plot.shap.summary <- function(data_long){
     # # add a "SHAP" bar notation
     # annotate("text", x = -Inf, y = -Inf, vjust = -0.2, hjust = 0, size = 3,
     #          label = expression(group("|", bar(SHAP), "|"))) + 
-    scale_color_gradient(low="#FFCC33", high="#6600CC", 
+    scale_color_gradient(low="#00CFCC", high="#FC723F", 
                          breaks=c(0,1), labels=c("Low","High")) +
     theme_bw() + 
     theme(axis.line.y = element_blank(), axis.ticks.y = element_blank(), # remove axis line

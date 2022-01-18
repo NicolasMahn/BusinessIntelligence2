@@ -1,4 +1,5 @@
-# Question four. SHAP Value for Qualitaet
+# SHAP Value for Qualitaet for explanation
+# With linear regression from xgboost
 
 q4 <- function() {
   
@@ -36,7 +37,7 @@ q4 <- function() {
   xgb.plot.shap(data = smartBuildX, # input data
                 model = model, # xgboost model
                 features = names(shapResults$mean_shap_score[1:3]), # only top 3 features
-                n_col = 3, # layout option
+                n_col = 1, # layout option
                 plot_loess = T # add red line to plot
   )
   
