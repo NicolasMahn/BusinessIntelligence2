@@ -3,10 +3,10 @@ loadData <-function(seed = 42, trainPortion = 0.8) {
   print("---LOADING DATA...---")
   
   # Change path for read
-  smartBuildDataFrame <- read.csv("./Data/SmartBuild.csv")
-  
+  smartBuildDataFrame <- read_csv("./Data/SmartBuild.csv")
+
   # Result
-  # Rows: 9986 Columns: 14                                                       
+  # Rows: 10000 Columns: 14                                                       
   # -- Column specification ------------------------------------------------------
   #  Delimiter: ","
   # chr  (3): Fehler, XKlasse, LScore
@@ -21,11 +21,25 @@ loadData <-function(seed = 42, trainPortion = 0.8) {
   # Comment out for Summary
   # summary(smartBuildDataFrame)
   
+  # Add attributes Ausschuss and IstQualitativ
+  # Here is one against all concept
+  smartBuildDataFrame$Ausschuss <- ifelse(smartBuildDataFrame$Fehler == "Ausschuss", "Ja", "Nein")
+  smartBuildDataFrame$IstQualitativ <- ifelse(smartBuildDataFrame$Qualitaet >= 1.5, "Ja", "Nein")
+  
   # Here can filter and factoring be defined
   smartBuildDataFrame <- smartBuildDataFrame[ , ]
   smartBuildDataFrame$Fehler <- as.factor(smartBuildDataFrame$Fehler)
   smartBuildDataFrame$XKlasse <- as.factor(smartBuildDataFrame$XKlasse)
   smartBuildDataFrame$LScore <- as.factor(smartBuildDataFrame$LScore)
+  smartBuildDataFrame$Ausschuss <- as.factor(smartBuildDataFrame$Ausschuss)
+  smartBuildDataFrame$IstQualitativ <- as.factor(smartBuildDataFrame$IstQualitativ)
+  
+  # Convert to clean data frame
+  # class(smartBuildDataFrame)
+  # "tbl_df"     "tbl"        "data.frame"
+  smartBuildDataFrame <- data.frame(smartBuildDataFrame)
+  # class(smartBuildDataFrame)
+  # "data.frame"
   
   smartBuildDataFrame <<- smartBuildDataFrame
   print("The entire dataframe can be found under 'smartBuildDataFrame'")

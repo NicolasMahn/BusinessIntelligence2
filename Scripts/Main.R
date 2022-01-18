@@ -7,10 +7,12 @@
 main <-function() {
 
   #Load all Scripts
-  source("Scripts/Package_Managing.R")
-  source("Scripts/Load_Data.R")
-  source("Scripts/Style.R")
+
+
   source("Scripts/Q1PredictionQualitaet.R")
+  source("Scripts/Configuration/Package_Managing.R")
+  source("Scripts/Configuration/Load_Data.R")
+  source("Scripts/Configuration/Style.R")
   #source("Scripts/SHAP/shap.R")
   #source("Scripts/SHAP/Q4.R")
   #source("Scripts/SHAP/Q5.R")
