@@ -15,15 +15,6 @@ q1 <- function() {
   error <- abs(predictedQualitaet - qualitaet)
   sortedError <<- error[order(error)]
   
-  
-  # sorted by weight
-  sortedTestDataByWeight <<- testData[order(testData$Gewicht), ]
-  sortedTrainDataByWeight <- trainData[order(trainData$Gewicht), ]
-  
-  model <- lm(Qualitaet~Durchmesser+Hoehe+Gewicht, sortedTrainData)
-  errorByWeight <<- abs(predict(model, sortedTestDataByWeight) 
-                      -sortedTestDataByWeight$Qualitaet)
-  
   # sorted by weight
   sortedTestDataByWeight <<- testData[order(testData$Gewicht), ]
   sortedTrainDataByWeight <- trainData[order(trainData$Gewicht), ]
@@ -56,7 +47,7 @@ q1 <- function() {
 q1Result <- function(){
   plot(x=qualitaet, xlab="Qualit\U00E4t", 
        y=predictedQualitaet, ylab="Vorhergesagte Qualit\U00E4t", col=turquoise)
-  points(seq(1.0, 2.0), col=pink)
+  points(seq(1.0, 2.0), col=pink, type="l")
 }
 
 q1Errors <- function(){

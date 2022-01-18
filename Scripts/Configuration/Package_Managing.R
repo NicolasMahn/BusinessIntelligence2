@@ -31,7 +31,8 @@ loadPackages <- function() {
   "remotes",
   "rpart",
   "rpart.plot",
-  "randomForest"
+  "randomForest",
+  "neuralnet"
   )
   
   package.check <- lapply(

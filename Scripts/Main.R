@@ -7,9 +7,10 @@
 main <-function() {
 
   #Load all Scripts
-
-
-  source("Scripts/Q1PredictionQualitaet.R")
+  
+  source("Scripts/Q13_Ionisationsfaktor_NN.R")
+  source("Scripts/Q12_Ionisationsfaktor.R")
+  source("Scripts/Q1_Qualitaet.R")
   source("Scripts/Configuration/Package_Managing.R")
   source("Scripts/Configuration/Load_Data.R")
   source("Scripts/Configuration/Style.R")
