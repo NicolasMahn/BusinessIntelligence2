@@ -3,12 +3,10 @@
 
 q4 <- function() {
   
-  print("---START QUESTION 4---")
-  
   require(xgboost)
   require(tidyverse)
   require(shapr)
-  source(gsub(" ", "", paste(getwd(), "/Scripts/SHAP/shap.R")))
+  source(gsub(" ", "", paste(getwd(), "/Scripts/Explanation/SHAP/shap.R")))
   
   smartBuildDummy = dummyVars( ~ Durchmesser + Hoehe + Gewicht, data=trainData)
   smartBuildX = predict(smartBuildDummy, newdata = smartBuildDataFrame)
@@ -41,5 +39,4 @@ q4 <- function() {
                 plot_loess = T # add red line to plot
   )
   
-  print("---END OF QUESTION 4---")
 }

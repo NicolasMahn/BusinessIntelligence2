@@ -1,4 +1,4 @@
-# Aufgabe 16: Neuronales Netz auf ShineScore
+# Aufgabe 17: Neuronales Netz auf Farbreinheit
 
 numColsSmartBuildDataFrame <- smartBuildDataFrame[,sapply(smartBuildDataFrame, is.numeric)]
 
@@ -16,7 +16,7 @@ scaledTrainData
 
 set.seed(42)
 
-model <- neuralnet(ShineScore~Hoehe+Durchmesser+Gewicht,
+model <- neuralnet(Farbreinheit~Hoehe+Durchmesser+Gewicht,
                    scaledTrainData, hidden=c(2,3), act.fct = 'logistic', 
                    linear.output = T, rep = 3)
 plot(model)
@@ -25,14 +25,14 @@ plot(model)
 
 pred <- compute(model, scaledTestData)
 pred$net.result
-pred$net.result = (pred$net.result * (max(testData$ShineScore) - min(testData$ShineScore))) + min(testData$ShineScore)
+pred$net.result = (pred$net.result * (max(testData$Farbreinheit) - min(testData$Farbreinheit))) + min(testData$Farbreinheit)
 pred$net.result
-err <- mean(abs(pred$net.result - testData$ShineScore))
+err <- mean(abs(pred$net.result - testData$Farbreinheit))
 err
 # 5.037
 
 # Baseline Error
-mean(abs(testData$ShineScore - mean(trainData$ShineScore)))
+mean(abs(testData$Farbreinheit - mean(trainData$Farbreinheit)))
 # 5.038
 
 linModel <- lm(ShineScore~Hoehe+Gewicht+Durchmesser, trainData)

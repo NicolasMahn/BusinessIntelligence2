@@ -1,8 +1,7 @@
-# Question four. SHAP Value for XKlasse
+# Q7 SHAP Value for XKlasse
 
 q4 <- function() {
   
-  print("---START QUESTION 7---")
   
   require(xgboost)
   require(tidyverse)
@@ -39,7 +38,4 @@ q4 <- function() {
                 n_col = 3, # layout option
                 plot_loess = T # add red line to plot
   )
-  
-  print("---END OF QUESTION 7---")
-  
 }

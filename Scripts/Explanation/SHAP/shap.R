@@ -68,7 +68,7 @@ plot.shap.summary <- function(data_long){
     # annotate("text", x = -Inf, y = -Inf, vjust = -0.2, hjust = 0, size = 3,
     #          label = expression(group("|", bar(SHAP), "|"))) + 
     scale_color_gradient(low="#00CFCC", high="#FC723F", 
-                         breaks=c(0,1), labels=c("Low","High")) +
+                         breaks=c(0,1), labels=c("Niedrig","Hoch")) +
     theme_bw() + 
     theme(axis.line.y = element_blank(), axis.ticks.y = element_blank(), # remove axis line
           legend.position="bottom") + 
@@ -77,7 +77,7 @@ plot.shap.summary <- function(data_long){
     # reverse the order of features
     scale_x_discrete(limits = rev(levels(data_long$variable)) 
     ) + 
-    labs(y = "SHAP value (impact on model output)", x = "", color = "Feature value") 
+    labs(y = "SHAP Value (Impact auf das Model-Output)", x = "", color = "Feature Wert") 
   return(plot1)
 }
 
