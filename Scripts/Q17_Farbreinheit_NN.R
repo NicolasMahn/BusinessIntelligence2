@@ -35,7 +35,7 @@ err
 mean(abs(testData$Farbreinheit - mean(trainData$Farbreinheit)))
 # 5.038
 
-linModel <- lm(ShineScore~Hoehe+Gewicht+Durchmesser, trainData)
+linModel <- lm(Farbreinheit~Hoehe+Gewicht+Durchmesser, trainData)
 linPred <- predict(linModel, testData)
-mean(abs(linPred - testData$ShineScore))
+mean(abs(linPred - testData$Farbreinheit))
 # 5.037

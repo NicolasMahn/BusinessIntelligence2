@@ -29,3 +29,11 @@ Sollte Git bei dir nicht installiert sein findest du [hier](https://happygitwith
 Die verwendeten Packages sind in dem Dokument ```Package_Managing.R``` zu finden.  
 Bevor man den restlichen Code ausführen kann muss man dieses Skript einmal durchlaufen lassen.   
 **Solltest du eine neue Library verwenden wollen füge diese bitte zuerst in ```Package_Managing.R``` hinzu!**
+
+## Abkürzungen
+- LR = Lineare Regression
+- LogR = Logistische Regression
+- DT = Decision Tree
+- RF = Random Forest
+- NN = Neuronale Netze
+- AB = AdaBoost
