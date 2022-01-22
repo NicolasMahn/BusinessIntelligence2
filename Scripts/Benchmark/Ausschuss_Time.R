@@ -30,7 +30,10 @@ mean(testData$Ausschuss == pred)
 
 
 microbenchmark(
-  model <- boosting(Ausschuss~Hoehe+Durchmesser+Gewicht, data = trainData, boos = TRUE, mfinal = 50),
+  model <- boosting(Ausschuss~Hoehe+Durchmesser+Gewicht,
+                    data = trainData,
+                    boos = TRUE, 
+                    mfinal = 50),
   times = 10L
 )
 pred <- predict(model, testData)

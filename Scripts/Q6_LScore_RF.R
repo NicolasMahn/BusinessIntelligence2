@@ -2,19 +2,13 @@
 #LScore Random Forest
 
 #Hier wurde das Random Forest Model genutzt:
-
-library(randomForest)
-library(party)
-
-# 200 trees
+# 200 trees, 2 variables
 randomForestModel <- randomForest(LScore ~ Gewicht+Hoehe+Durchmesser, 
                                   data = trainData, 
                                   ntree=200,
-                                  mtry=3,
+                                  mtry=2,
                                   importance = TRUE)
-
 randomForestModel
-
 # plot(randomForestModel)
 predictions <- predict(randomForestModel, testData)
 

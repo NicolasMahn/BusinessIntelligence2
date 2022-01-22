@@ -7,7 +7,7 @@ q4 <- function() {
   require(xgboost)
   require(tidyverse)
   require(shapr)
-  source(gsub(" ", "", paste(getwd(), "/Scripts/SHAP/shap.R")))
+  source("/shap.R")
   
   smartBuildDummy = dummyVars( ~ Durchmesser + Hoehe + Gewicht, data=trainData)
   smartBuildX = predict(smartBuildDummy, newdata = smartBuildDataFrame)
