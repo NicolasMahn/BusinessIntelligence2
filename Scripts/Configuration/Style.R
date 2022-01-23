@@ -2,6 +2,7 @@ loadStyle <- function(){
   
   #defining standard colors
   blue <<- "#1A5E8F"
+  lightBlue <<- "#91D1FF"
   lightRose <<- "#FFD6E1"
   rose <<- "#E898AC"
   turquoise <<- "#00CFCC"
@@ -9,6 +10,9 @@ loadStyle <- function(){
   pink <<- "#F64975"
   lightTurquoise <<- "#5EFFFD"
   orange <<- "#FC723F"
+  red <<- "#F6492E"
+  yellow <<- "#F1E83D"
+  green <<- "#07DF7F"
   
   backgroundColor <<- "#002845"
   textColor <<- "#FFFFFF"

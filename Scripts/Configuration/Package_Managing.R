@@ -26,7 +26,8 @@ loadPackages <- function() {
   "adabag",
   "fastAdaboost",
   "robustbase",
-  "microbenchmark"
+  "microbenchmark",
+  "ggforce"
   )
   
   package.check <- lapply(
