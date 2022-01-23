@@ -22,15 +22,11 @@ loadPackages <- function() {
   "rpart",
   "rpart.plot",
   "randomForest",
-<<<<<<< HEAD
-  "neuralnet"
-=======
   "neuralnet",
   "adabag",
   "fastAdaboost",
   "robustbase",
   "microbenchmark"
->>>>>>> 9f0d377994c95a581af2d408ee27fc23a08f10c5
   )
   
   package.check <- lapply(
