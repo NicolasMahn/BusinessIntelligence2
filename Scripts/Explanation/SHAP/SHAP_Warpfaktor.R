@@ -1,9 +1,5 @@
-# Question four. SHAP Value for Warpfaktor
+# SHAP Value for Warpfaktor
 
-q4 <- function() {
-  
-  print("---START QUESTION 13---")
-  
   require(xgboost)
   require(tidyverse)
   require(shapr)
@@ -39,6 +35,3 @@ q4 <- function() {
                 n_col = 3, # layout option
                 plot_loess = T # add red line to plot
   )
-  
-  print("---END OF QUESTION 13---")
-}

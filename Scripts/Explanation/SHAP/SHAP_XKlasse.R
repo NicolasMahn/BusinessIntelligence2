@@ -1,8 +1,5 @@
-# Q7 SHAP Value for XKlasse
+# SHAP Value for XKlasse
 
-q4 <- function() {
-  
-  
   require(xgboost)
   require(tidyverse)
   require(shapr)
@@ -38,4 +35,3 @@ q4 <- function() {
                 n_col = 3, # layout option
                 plot_loess = T # add red line to plot
   )
-}

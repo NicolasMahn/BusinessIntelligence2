@@ -1,8 +1,4 @@
-# Question four. SHAP Value for LScore
-
-q4 <- function() {
-  
-  print("---START QUESTION 6---")
+# SHAP Value for LScore
   
   require(xgboost)
   require(tidyverse)
@@ -39,7 +35,3 @@ q4 <- function() {
                 n_col = 3, # layout option
                 plot_loess = T # add red line to plot
   )
-  
-  print("---END OF QUESTION 6---")
-  
-}
