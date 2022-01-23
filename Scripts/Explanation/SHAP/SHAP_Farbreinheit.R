@@ -1,9 +1,4 @@
-# Question four. SHAP Value for Farbreinheit
-
-q4 <- function() {
-  
-  print("---START QUESTION 9---")
-  
+# SHAP Value for Farbreinheit
   require(xgboost)
   require(tidyverse)
   require(shapr)
@@ -39,6 +34,3 @@ q4 <- function() {
                 n_col = 3, # layout option
                 plot_loess = T # add red line to plot
   )
-  
-  print("---END OF QUESTION 9---")
-}

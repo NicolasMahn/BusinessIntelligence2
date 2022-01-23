@@ -1,8 +1,4 @@
-# Question four. SHAP Value for Fluxkomensation
-
-q4 <- function() {
-  
-  print("---START QUESTION 10---")
+# SHAP Value for Fluxkomensation
   
   require(xgboost)
   require(tidyverse)
@@ -40,5 +36,3 @@ q4 <- function() {
                 plot_loess = T # add red line to plot
   )
   
-  print("---END OF QUESTION 10---")
-}

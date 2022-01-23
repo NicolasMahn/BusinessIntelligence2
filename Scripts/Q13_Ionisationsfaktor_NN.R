@@ -22,8 +22,8 @@ q13 <- function() {
   
   scaledTrainData
   
-  model <- neuralnet(Ionisationsfaktor~Hoehe+Durchmesser+Gewicht,
-                     scaledTrainData, hidden=3, act.fct = 'logistic', 
+  model <- neuralnet(Ionisationsfaktor~Hoehe,
+                     scaledTrainData, hidden=c(3,3), act.fct = 'logistic', 
                      linear.output = T,
                      rep=2)
   plot(model)

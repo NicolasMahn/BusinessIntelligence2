@@ -1,9 +1,5 @@
-# Question four. SHAP Value for Gammawert
+# SHAP Value for Gammawert
 
-q4 <- function() {
-  
-  print("---START QUESTION 8---")
-  
   require(xgboost)
   require(tidyverse)
   require(shapr)
@@ -39,7 +35,3 @@ q4 <- function() {
                 n_col = 3, # layout option
                 plot_loess = T # add red line to plot
   )
-  
-  print("---END OF QUESTION 8---")
-  
-}

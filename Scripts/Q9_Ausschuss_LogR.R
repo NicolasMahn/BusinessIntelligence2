@@ -19,4 +19,4 @@ newData$AusschussPred = predict(logisticModel, newData, type="response")
 
 # Datenpunkte bei 1.0 sind Ausschüsse, bei 0 keine
 plot(logisticTestData$Gewicht, logisticTestData$Ausschuss, col=orange)
-points(AusschussPred~Gewicht, newData, type="l", col=lightTurquoise)
+plot(AusschussPred~Gewicht, newData, type="l", col=lightTurquoise)
