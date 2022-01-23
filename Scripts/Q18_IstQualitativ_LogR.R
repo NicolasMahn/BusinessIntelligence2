@@ -31,5 +31,5 @@ newData$QualPred = predict(logisticModel, newData, type="response")
 
 # Plot der Sigmoid Kurve nur mit Hoehe und Gewicht
 plot3d(logisticTestData$Gewicht, logisticTestData$Hoehe, 
-       logisticTestData$Qualitaet, col=(logisticTestData$IstQualitativ+1))
-#points3d(newData$Gewicht, newData$Hoehe, newData$QualPred, col=lightTurquoise)
+       logisticTestData$IstQualitativ, col=(logisticTestData$IstQualitativ+1))
+points3d(newData$Gewicht, newData$Hoehe, newData$QualPred, col=lightTurquoise)

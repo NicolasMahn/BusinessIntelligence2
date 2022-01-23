@@ -47,10 +47,10 @@ q10 <- function() {
 
 # Visualization
 q10Result <- function(){
-  plot(x=fluxkomensation, xlab="Fluxkomensation", xlim= c(12,35), 
+  plot(x=fluxkomensation, xlab="Fluxkomensation", xlim= c(300,1000), 
        y=predictedFluxkomensation, ylab="Vorhergesagte Fluxkomensation", 
-       ylim= c(12,35), col=turquoise)
-  points(seq(1.0, 35.0), col=lightTurquoise, type="l")
+       ylim= c(300,1000), col=turquoise)
+  points(seq(0, 1000.0), col=lightBlue, type="l")
 }
 
 q10Errors <- function(){
