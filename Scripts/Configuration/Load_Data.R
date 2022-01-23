@@ -34,6 +34,7 @@ loadData <-function(seed = 42, trainPortion = 0.8) {
   smartBuildDataFrame$Ausschuss <- as.factor(smartBuildDataFrame$Ausschuss)
   smartBuildDataFrame$IstQualitativ <- as.factor(smartBuildDataFrame$IstQualitativ)
   
+  
   # Convert to clean data frame
   # class(smartBuildDataFrame)
   # "tbl_df"     "tbl"        "data.frame"
@@ -53,6 +54,33 @@ loadData <-function(seed = 42, trainPortion = 0.8) {
   print("The training dataframe can be found under 'trainData'")
   testData <<- smartBuildDataFrame[-selectIndex, ]
   print("The testing dataframe can be found under 'testData'")
+  
+  
+  # Preparing Logistic Dataframe, since logistical regression needs either 1 or 0
+  logisticDataFrame <- smartBuildDataFrame
+  logisticDataFrame$Ausschuss <- ifelse(logisticDataFrame$Ausschuss == "Ja", 1, 0)
+  logisticDataFrame$IstQualitativ <- ifelse(logisticDataFrame$IstQualitativ == "Ja", 1, 0)
+  logisticDataFrame <<- logisticDataFrame
+  print("The logistic dataframe can be found under 'logisticDataFrame'")
+  
+  logisticTrainData <<- logisticDataFrame[selectIndex, ]
+  print("The logistic testing dataframe can be found under 'logisticTrainData'")
+  logisticTestData <<- logisticDataFrame[-selectIndex, ]
+  print("The logistic testing dataframe can be found under 'logisticTestData'")
+  
+  # Preparing scaled Dataframe for neural nets
+  numColsSmartBuildDataFrame <- smartBuildDataFrame[,sapply(smartBuildDataFrame, is.numeric)]
+  max = apply(numColsSmartBuildDataFrame, 2 , max)
+  min = apply(numColsSmartBuildDataFrame, 2 , min)
+  
+  scaledSmartBuildDataFrame = as.data.frame(scale(numColsSmartBuildDataFrame, center = min, scale = max - min))
+  scaledSmartBuildDataFrame <<- scaledSmartBuildDataFrame
+  print("The scaled dataframe can be found under 'scaledSmartBuildDataFrame'")
+  
+  scaledTrainData <- scaledSmartBuildDataFrame[selectIndex,]
+  print("The scaled dataframe can be found under 'scaledTrainData'")
+  scaledTestData <- scaledSmartBuildDataFrame[-selectIndex,]
+  print("The scaled dataframe can be found under 'scaledTestData'")
   
   print("---DATA HAS BEEN LOADED---")
 }

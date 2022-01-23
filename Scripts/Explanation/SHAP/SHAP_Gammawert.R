@@ -1,14 +1,13 @@
-# SHAP Value for Qualitaet for explanation
-# With linear regression from xgboost
+# Question four. SHAP Value for Gammawert
 
 q4 <- function() {
   
-  print("---START QUESTION 4---")
+  print("---START QUESTION 8---")
   
   require(xgboost)
   require(tidyverse)
   require(shapr)
-  source(gsub(" ", "", paste(getwd(), "/Scripts/SHAP/shap.R")))
+  source(gsub(" ", "", paste(getwd(), "/Scripts/Explanation/SHAP/shap.R")))
   
   smartBuildDummy = dummyVars( ~ Durchmesser + Hoehe + Gewicht, data=trainData)
   smartBuildX = predict(smartBuildDummy, newdata = smartBuildDataFrame)
@@ -16,7 +15,7 @@ q4 <- function() {
   model = xgboost(data = smartBuildX, 
                   nround = 100, 
                   objective = "reg:linear",
-                  label = smartBuildDataFrame$Qualitaet)
+                  label = smartBuildDataFrame$Gammawert)
   
   shapResults = shap.score.rank(xgb_model = model, 
                                 X_train = smartBuildX,
@@ -37,9 +36,10 @@ q4 <- function() {
   xgb.plot.shap(data = smartBuildX, # input data
                 model = model, # xgboost model
                 features = names(shapResults$mean_shap_score[1:3]), # only top 3 features
-                n_col = 1, # layout option
+                n_col = 3, # layout option
                 plot_loess = T # add red line to plot
   )
   
-  print("---END OF QUESTION 4---")
+  print("---END OF QUESTION 8---")
+  
 }

@@ -1,13 +1,13 @@
-# Question four. SHAP Value for Gammawert
+# Question four. SHAP Value for Shinescore
 
 q4 <- function() {
   
-  print("---START QUESTION 8---")
-  
+  print("---START QUESTION 12---")
+  require(caret)
   require(xgboost)
   require(tidyverse)
   require(shapr)
-  source(gsub(" ", "", paste(getwd(), "/Scripts/SHAP/shap.R")))
+  source(gsub(" ", "", paste(getwd(), "/Scripts/Explanation/SHAP/shap.R")))
   
   smartBuildDummy = dummyVars( ~ Durchmesser + Hoehe + Gewicht, data=trainData)
   smartBuildX = predict(smartBuildDummy, newdata = smartBuildDataFrame)
@@ -15,7 +15,7 @@ q4 <- function() {
   model = xgboost(data = smartBuildX, 
                   nround = 100, 
                   objective = "reg:linear",
-                  label = smartBuildDataFrame$Gammawert)
+                  label = smartBuildDataFrame$ShineScore)
   
   shapResults = shap.score.rank(xgb_model = model, 
                                 X_train = smartBuildX,
@@ -40,6 +40,5 @@ q4 <- function() {
                 plot_loess = T # add red line to plot
   )
   
-  print("---END OF QUESTION 8---")
-  
+  print("---END OF QUESTION 12---")
 }

@@ -28,3 +28,4 @@ smartBuildDataFrameFiltered = smartBuildDataFrame[smartBuildDataFrameFiltered,]
 summary(smartBuildDataFrameFiltered$Ausschuss)
 # ja            nein 
 # 3436          1465
+

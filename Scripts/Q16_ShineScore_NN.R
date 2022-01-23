@@ -1,28 +1,12 @@
-# Aufgabe 7: Neuronales Netz auf Qualitaet
+# Aufgabe 16: Neuronales Netz auf ShineScore
 
-numColsSmartBuildDataFrame <- smartBuildDataFrame[,sapply(smartBuildDataFrame, is.numeric)]
-
-max = apply(numColsSmartBuildDataFrame, 2 , max)
-min = apply(numColsSmartBuildDataFrame, 2 , min)
-
-scaledSmartBuildDataFrame = as.data.frame(scale(numColsSmartBuildDataFrame, center = min, scale = max - min))
-
-index <- sample(1:nrow(scaledSmartBuildDataFrame), size = nrow(scaledSmartBuildDataFrame)*0.8)
-
-scaledTrainData <- scaledSmartBuildDataFrame[index,]
-scaledTestData <- scaledSmartBuildDataFrame[-index,]
-
-scaledTrainData
-
-set.seed(42)
-
+#neural net
 model <- neuralnet(ShineScore~Hoehe+Durchmesser+Gewicht,
                    scaledTrainData, hidden=c(2,3), act.fct = 'logistic', 
                    linear.output = T, rep = 3)
 plot(model)
 
-?neuralnet
-
+# Be careful with compute, since another library also has a compute function, which cannot handle a neural net model
 pred <- compute(model, scaledTestData)
 pred$net.result
 pred$net.result = (pred$net.result * (max(testData$ShineScore) - min(testData$ShineScore))) + min(testData$ShineScore)

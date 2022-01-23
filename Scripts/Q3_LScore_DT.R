@@ -21,10 +21,3 @@ accuracy
 
 plot(treeModel)
 #[1] 0.9325
-#Unter _x
-#Prüfen Sie, auf welcher Basis Ihre Modelle die Prognose erzeugen
-
-# Auf Grundlage Gewicht, Hoehe und Durchmesser die Prognose erzeugt. 
-# Gewicht ist alleine ausschlaggebend für die Generierung des DecisionTree.
-
-#Anmerkung: Ggf. können Sie auch zeigen, dass keine gute Vorhersage (mit den von uns behandelten Modellen)möglich ist.

@@ -1,8 +1,5 @@
 
 q1 <- function() {
-  #
-  # First Approach
-  #
   
   # Sort the data frames
   sortedTestData <- testData[order(testData$Qualitaet), ]

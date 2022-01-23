@@ -3,9 +3,6 @@
 
 #Hier wurde das Random Forest Model genutzt:
 
-library(randomForest)
-library(party)
-
 print("-----------Random Forest---------------------")
 randomForestModel <- randomForest(XKlasse ~ Gewicht+Hoehe+Durchmesser, 
                                   data = trainData, 

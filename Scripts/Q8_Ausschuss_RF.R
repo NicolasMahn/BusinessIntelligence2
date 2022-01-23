@@ -23,3 +23,17 @@ table(pred = predictions, real = testData$Ausschuss)
 
 mean(predictions == testData$Ausschuss)
 # 77.45%
+
+
+# ROCR Kurve
+predicted <- predict(randomForestModel, testData, type="prob")
+pred <- data.frame(t(matrix(unlist(predicted), 2)))
+#calculating the probability that an instance belongs to a given class
+pred_prob <- pred[ , 1]
+pred_prob <- 1 - pred_prob
+#obtaining the RoC Curve
+pr <- prediction(pred_prob, testData$IstQualitativ)
+roc <- performance(pr, "tpr", "fpr")
+plot(roc)
+# Line from 0 to 1
+abline(0,1)
