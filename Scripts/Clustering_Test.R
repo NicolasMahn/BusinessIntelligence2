@@ -1,7 +1,7 @@
 plot3d(smartBuildDataFrame$Durchmesser, 
          smartBuildDataFrame$Hoehe, 
          smartBuildDataFrame$Gewicht)
-
+decorate3d(xlab = "x", ylab = "y", zlab = "z", axes=TRUE)
 
 max = apply(smartBuildDataFrame[,c(2:4)], 2, max)
 max = apply(smartBuildDataFrame[,c(2:4)], 2, max)
