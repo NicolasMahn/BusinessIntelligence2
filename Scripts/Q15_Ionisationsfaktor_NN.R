@@ -6,7 +6,7 @@ model <- neuralnet(Ionisationsfaktor~Hoehe+Durchmesser+Gewicht,
 plot(model)
 
 # Be careful with compute, since another library also has a compute function, which cannot handle a neural net model
-pred <- compute(model, scaledTestData)
+pred <- neuralnet::compute(model, scaledTestData)
 pred$net.result
 pred$net.result = (pred$net.result * (max(testData$Ionisationsfaktor) - min(testData$Ionisationsfaktor))) + min(testData$Ionisationsfaktor)
 pred$net.result
@@ -18,6 +18,9 @@ err
 mean(abs(testData$Ionisationsfaktor - mean(trainData$Ionisationsfaktor)))
 # 2.335
 
+
+
+# In Comparison: Linear Regression
 linModel <- lm(Ionisationsfaktor~Hoehe+Durchmesser+Gewicht, testData)
 linPred <- predict(linModel, testData)
 mean(abs(linPred - testData$Ionisationsfaktor))

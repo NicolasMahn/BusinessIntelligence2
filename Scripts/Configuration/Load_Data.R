@@ -25,6 +25,7 @@ loadData <-function(seed = 42, trainPortion = 0.8) {
   # Here is one against all concept
   smartBuildDataFrame$Ausschuss <- ifelse(smartBuildDataFrame$Fehler == "Ausschuss", "Ja", "Nein")
   smartBuildDataFrame$IstQualitativ <- ifelse(smartBuildDataFrame$Qualitaet >= 1.5, "Ja", "Nein")
+  smartBuildDataFrame$HatFehler <- ifelse(smartBuildDataFrame$Fehler == "nein", "Nein", "Ja")
   
   # Here can filter and factoring be defined
   smartBuildDataFrame <- smartBuildDataFrame[ , ]
@@ -33,6 +34,7 @@ loadData <-function(seed = 42, trainPortion = 0.8) {
   smartBuildDataFrame$LScore <- as.factor(smartBuildDataFrame$LScore)
   smartBuildDataFrame$Ausschuss <- as.factor(smartBuildDataFrame$Ausschuss)
   smartBuildDataFrame$IstQualitativ <- as.factor(smartBuildDataFrame$IstQualitativ)
+  smartBuildDataFrame$HatFehler <- as.factor(smartBuildDataFrame$HatFehler)
   
   
   # Convert to clean data frame
@@ -60,6 +62,7 @@ loadData <-function(seed = 42, trainPortion = 0.8) {
   logisticDataFrame <- smartBuildDataFrame
   logisticDataFrame$Ausschuss <- ifelse(logisticDataFrame$Ausschuss == "Ja", 1, 0)
   logisticDataFrame$IstQualitativ <- ifelse(logisticDataFrame$IstQualitativ == "Ja", 1, 0)
+  logisticDataFrame$HatFehler <- ifelse(logisticDataFrame$HatFehler == "Ja", 1, 0)
   logisticDataFrame <<- logisticDataFrame
   print("The logistic dataframe can be found under 'logisticDataFrame'")
   

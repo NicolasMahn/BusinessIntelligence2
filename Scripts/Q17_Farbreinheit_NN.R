@@ -7,7 +7,7 @@ model <- neuralnet(Farbreinheit~Hoehe+Durchmesser+Gewicht,
 plot(model)
 
 # Be careful with compute, since another library also has a compute function, which cannot handle a neural net model
-pred <- compute(model, scaledTestData)
+pred <- neuralnet::compute(model, scaledTestData)
 pred$net.result
 pred$net.result = (pred$net.result * (max(testData$Farbreinheit) - min(testData$Farbreinheit))) + min(testData$Farbreinheit)
 pred$net.result
