@@ -19,7 +19,7 @@ predictions$confusion
 # Nein    60   940
 
 mean(predictions$class == testData$IstQualitativ)
-# 94.65%
+# 94.
 
 
 # Decision Tree for comparison
@@ -33,4 +33,4 @@ table(pred = predict, real = testData$IstQualitativ)
 # Nein    186  837
 
 mean(predict==testData$IstQualitativ)
-# 83.2%
+# 93.25%
