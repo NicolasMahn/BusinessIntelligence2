@@ -4,7 +4,7 @@
 randomForestModel <- randomForest(IstQualitativ ~ Gewicht+Hoehe+Durchmesser, 
                                   data = trainData, 
                                   ntree=200,
-                                  mtry=2,
+                                  mtry=3,
                                   importance = TRUE)
 randomForestModel
 
