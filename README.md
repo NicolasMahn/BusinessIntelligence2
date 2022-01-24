@@ -3,7 +3,7 @@
 ## Nutzung
 Um alle Skripte ausführen zu können sollten zuerst die Daten und die verwendeten Libraries sowie das Style geladen werden. Dieser Vorgang wurde mit den folgenden Zeilen Code vereinfacht, die in der Konsole eingegeben werden müssen:
 
-"""
+```
 source("Scripts/Configuration/Package_Managing.R")
 source("Scripts/Configuration/Load_Data.R")
 source("Scripts/Configuration/Style.R")
@@ -11,7 +11,8 @@ source("Scripts/Configuration/Style.R")
 loadPackages()
 loadData()
 loadStyle()
-"""
+```
+
 Damit sind die nötigen Daten geladen und die Libraries eingestellt, wodurch alle Skripte ausgeführt werden können.
 Style wird benötigt für die Farben, die in den Plots genutzt werden, da sonst Fehler geschmissen werden. Bei Aufforderung einer y/n Antwort für das Laden von weiteren Fonts kann hier n gedrückt werden, da der Prozess zum Downloaden der Fonts lange dauert.
 
