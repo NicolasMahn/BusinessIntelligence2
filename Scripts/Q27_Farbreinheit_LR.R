@@ -1,84 +1,81 @@
-#Q10_Fluxkomensation_LR
+#Q27_Farbreinheit_LR
 
 
-q10 <- function() {
-
+q27 <- function() {
   
   # Sort the data frames
-  sortedTestData <- testData[order(testData$Fluxkomensation), ]
-  sortedTrainData <- trainData[order(trainData$Fluxkomensation), ]
+  sortedTestData <- testData[order(testData$Farbreinheit), ]
+  sortedTrainData <- trainData[order(trainData$Farbreinheit), ]
   
-  modelFlux <<- lm(Fluxkomensation~Hoehe, sortedTrainData)
-  predictedFluxkomensation <<- predict(modelFlux, sortedTestData)
-  fluxkomensation <<- sortedTestData$Fluxkomensation
+  model <- lm(Farbreinheit~Durchmesser+Hoehe+Gewicht, sortedTrainData)
+  predictedFarbreinheit <<- predict(model, sortedTestData)
+  farbreinheit <<- sortedTestData$Farbreinheit
   
-  error <- abs(predictedFluxkomensation - fluxkomensation)
+  error <- abs(predictedFarbreinheit - farbreinheit)
   sortedError <<- error[order(error)]
-  
   
   # sorted by weight
   sortedTestDataByWeight <<- testData[order(testData$Gewicht), ]
   sortedTrainDataByWeight <- trainData[order(trainData$Gewicht), ]
   
-  model <- lm(Fluxkomensation~Durchmesser+Hoehe+Gewicht, sortedTrainDataByWeight)
+  model <- lm(Farbreinheit~Durchmesser+Hoehe+Gewicht, sortedTrainDataByWeight)
   errorByWeight <<- abs(predict(model, sortedTestDataByWeight) 
-                        -sortedTestDataByWeight$Fluxkomensation)
+                        -sortedTestDataByWeight$Farbreinheit)
   
   # sorted by diameter
   sortedTestDataByDiameter <<- testData[order(testData$Durchmesser), ]
   sortedTrainDataByDiameter <- trainData[order(trainData$Durchmesser), ]
   
-  model <- lm(Fluxkomensation~Durchmesser+Hoehe+Gewicht, sortedTrainDataByDiameter)
+  model <- lm(Farbreinheit~Durchmesser+Hoehe+Gewicht, sortedTrainDataByDiameter)
   errorByDiameter <<- abs(predict(model, sortedTestDataByDiameter) 
-                          -sortedTestDataByDiameter$Fluxkomensation)
+                          -sortedTestDataByDiameter$Farbreinheit)
   
   # sorted by height
   sortedTestDataByHeight <- testData[order(testData$Hoehe), ]
   sortedTrainDataByHeight <- trainData[order(trainData$Hoehe), ]
   
-  model <- lm(Fluxkomensation~Durchmesser+Hoehe+Gewicht, sortedTrainDataByHeight)
+  model <- lm(Farbreinheit~Durchmesser+Hoehe+Gewicht, sortedTrainDataByHeight)
   errorByHeight <<- abs(predict(model, sortedTestDataByHeight) 
-                        -sortedTestDataByHeight$Fluxkomensation)
+                        -sortedTestDataByHeight$Farbreinheit)
   
-  print("q10 is initialized visualize with: q10Results(), q10Errors()")
+  print("q27 is initialized visualize with: q27Results(), q27Errors()")
 }
+
 
 # Visualization
-q10Result <- function(){
-  plot(x=fluxkomensation, xlab="Fluxkomensation", xlim= c(300,1000), 
-       y=predictedFluxkomensation, ylab="Vorhergesagte Fluxkomensation", 
-       ylim= c(300,1000), col=turquoise)
-  points(seq(0, 1000.0), col=lightBlue, type="l")
+q27Result <- function(){
+  plot(x=farbreinheit, xlab="Farbreinheit", 
+       y=predictedFarbreinheit, ylab="Vorhergesagte Farbreinheit", 
+       col=lightRose)
+  #points(seq(1.0, 2.0), col=pink, type="l")
 }
 
-q10Errors <- function(){
+q27Errors <- function(){
   plot(x=seq(1,length(error),by=1),y=sortedError,
        xlab="sortierte Abweichungen",
        ylab="absoluter Abweichungswert",
-       col=orange)
+       ylim=c(0,0.2), col=pink)
   print(paste("Durchschnittliche Abweichung:", mean(sortedError)))
   #sqrt(mean(error))
 }
 
-q10ErrorsNachGewicht <- function(){
+q27ErrorsNachGewicht <- function(){
   plot(x=seq(1,length(errorByWeight),by=1),y=errorByWeight,
        xlab="sortierte Abweichungen nach Gewicht",
        ylab="absoluter Abweichungswert",
-       col=orange)
+       ylim=c(0,0.2), col=pink)
 }
 
-q10ErrorsNachDurchmesser <- function(){
+q27ErrorsNachDurchmesser <- function(){
   plot(x=seq(1,length(errorByDiameter),by=1),y=errorByDiameter,
        xlab="sortierte Abweichungen nach Durchmesser",
        ylab="absoluter Abweichungswert",
-       col=orange)
+       ylim=c(0,0.2), col=pink)
 }
 
-q10ErrorsNachHoehe <- function(){
+q27ErrorsNachHoehe <- function(){
   plot(x=seq(1,length(errorByHeight),by=1),y=errorByHeight,
        xlab="sortierte Abweichungen nach H\U00F6he",
        ylab="absoluter Abweichungswert",
-       col=orange)
+       ylim=c(0,0.2), col=pink)
 }
-
-

@@ -22,13 +22,13 @@
   
   
   shapLongResults = shap.prep(shap = shapResults,
-                              X_train = smartBuildX, 
+                              X_train = smartBuildX,
                               top_n = 3
   )
-  
+
   plot.shap.summary(data_long = shapLongResults)
-  
-  
+
+
   xgb.plot.shap(data = smartBuildX, # input data
                 model = model, # xgboost model
                 features = names(shapResults$mean_shap_score[1:3]), # only top 3 features

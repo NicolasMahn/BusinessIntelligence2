@@ -57,22 +57,36 @@ plot.shap.summary <- function(data_long){
   plot1 <- ggplot(data = data_long)+
     coord_flip() + 
     # sina plot: 
-    geom_sina(aes(x = variable, y = value, color = stdfvalue)) +
+    geom_sina(aes(x = variable, y = value, colour = stdfvalue)) +
     # print the mean absolute value: 
     geom_text(data = unique(data_long[, c("variable", "mean_value"), with = F]),
               aes(x = variable, y=-Inf, label = sprintf("%.3f", mean_value)),
               size = 3, alpha = 0.7,
               hjust = -0.2, 
-              fontface = "bold") + # bold
+              fontface = "bold",
+              colour = textColor) + # bold
     # # add a "SHAP" bar notation
     # annotate("text", x = -Inf, y = -Inf, vjust = -0.2, hjust = 0, size = 3,
     #          label = expression(group("|", bar(SHAP), "|"))) + 
-    scale_color_gradient(low="#00CFCC", high="#FC723F", 
+    scale_color_gradient(low=turquoise, high=orange, 
                          breaks=c(0,1), labels=c("Niedrig","Hoch")) +
     theme_bw() + 
-    theme(axis.line.y = element_blank(), axis.ticks.y = element_blank(), # remove axis line
-          legend.position="bottom") + 
-    geom_hline(yintercept = 0) + # the vertical line
+    theme(axis.line.y = element_blank(), 
+          axis.ticks.y = element_blank(), # remove axis line
+          line = element_line(colour = textColor),
+          rect = element_rect(fill = textColor, colour = textColor),
+          legend.position="bottom",
+          legend.background = element_rect(fill = backgroundColor),
+          strip.text = element_text(colour = textColor),
+          plot.background = element_rect(fill = backgroundColor),
+          panel.background = element_rect(fill = backgroundColor),
+          panel.border = element_rect(color= textColor),
+          panel.grid = element_blank(),
+          text = element_text(family = "Bahnschrift", 
+                              colour = textColor),
+          axis.text = element_text(family = "Bahnschrift",
+                                   colour = textColor)) + 
+    geom_hline(yintercept = 0, colour= textColor) + # the vertical line
     scale_y_continuous(limits = c(-x_bound, x_bound)) +
     # reverse the order of features
     scale_x_discrete(limits = rev(levels(data_long$variable)) 
@@ -83,13 +97,22 @@ plot.shap.summary <- function(data_long){
 
 var_importance <- function(shap_result, top_n=10)
 {
-  var_importance=tibble(var=names(shap_result$mean_shap_score), importance=shap_result$mean_shap_score)
+  var_importance=tibble(var=names(shap_result$mean_shap_score), 
+                        importance=shap_result$mean_shap_score)
   
   var_importance=var_importance[1:top_n,]
   
-  ggplot(var_importance, aes(x=reorder(var,importance), y=importance)) + 
-    geom_bar(stat = "identity") + 
+  ggplot(var_importance, aes(x=reorder(var,importance), y=importance))+
+    geom_bar(stat = "identity", fill=pink) + 
     coord_flip() + 
     theme_light() + 
-    theme(axis.title.y=element_blank()) 
+    theme(axis.title.y=element_blank(), 
+          plot.background = element_rect(fill = backgroundColor),
+          panel.background = element_rect(fill = backgroundColor),
+          panel.border = element_rect(color= textColor),
+          panel.grid = element_blank(),
+          text = element_text(family = "Bahnschrift", 
+                              colour = textColor),
+          axis.text = element_text(family = "Bahnschrift",
+                                   colour = textColor)) 
 }

@@ -32,5 +32,6 @@
                 model = model, # xgboost model
                 features = names(shapResults$mean_shap_score[1:3]), # only top 3 features
                 n_col = 3, # layout option
-                plot_loess = T # add red line to plot
+                plot_loess = T, # add red line to plot
+                col = turquoise
   )

@@ -10,7 +10,8 @@ linModel <- lm(Fluxkomensation~Hoehe, trainData)
 linRes <- predict(linModel, newData)
 
 # Plotting
-plot(trainData$Hoehe, trainData$Fluxkomensation, col=lightRose, xlab="Höhe", ylab="Fluxkomensation")
+plot(trainData$Hoehe, trainData$Fluxkomensation, col=lightRose, xlab="Höhe", 
+     ylab="Fluxkomensation")
 points(newData$Hoehe, polRes, type="l", col=turquoise, lwd=4)
 points(newData$Hoehe, linRes, type="l", col=orange, lwd=4)
 
