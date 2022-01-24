@@ -1,4 +1,4 @@
-# BusinessIntelligence2
+# BusinessIntelligence Aufgabe 2
 
 ## Nutzung
 Um alle Skripte ausführen zu können sollten zuerst die Daten und die verwendeten Libraries sowie das Style geladen werden. Dieser Vorgang wurde mit den folgenden Zeilen Code vereinfacht, die in der Konsole eingegeben werden müssen:
@@ -16,6 +16,13 @@ loadStyle()
 Damit sind die nötigen Daten geladen und die Libraries eingestellt, wodurch alle Skripte ausgeführt werden können.
 Style wird benötigt für die Farben, die in den Plots genutzt werden, da sonst Fehler geschmissen werden. Bei Aufforderung einer y/n Antwort für das Laden von weiteren Fonts kann hier n gedrückt werden, da der Prozess zum Downloaden der Fonts lange dauert.
 
+## Abkürzungen
+- LR = Lineare Regression
+- LogR = Logistische Regression
+- DT = Decision Tree
+- RF = Random Forest
+- NN = Neuronale Netze
+- AB = AdaBoost
 
 ## Installation
 
@@ -46,11 +53,3 @@ Sollte Git bei dir nicht installiert sein findest du [hier](https://happygitwith
 Die verwendeten Packages sind in dem Dokument ```Package_Managing.R``` zu finden.  
 Bevor man den restlichen Code ausführen kann muss man dieses Skript einmal durchlaufen lassen.   
 **Solltest du eine neue Library verwenden wollen füge diese bitte zuerst in ```Package_Managing.R``` hinzu!**
-
-## Abkürzungen
-- LR = Lineare Regression
-- LogR = Logistische Regression
-- DT = Decision Tree
-- RF = Random Forest
-- NN = Neuronale Netze
-- AB = AdaBoost
