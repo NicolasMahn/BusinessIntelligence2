@@ -27,7 +27,10 @@ loadPackages <- function() {
   "fastAdaboost",
   "robustbase",
   "microbenchmark",
-  "ggforce"
+  "ggforce",
+  "lime",
+  "MASS",
+  "e1071"
   )
   
   package.check <- lapply(
