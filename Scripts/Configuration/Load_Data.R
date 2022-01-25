@@ -87,3 +87,4 @@ loadData <-function(seed = 42, trainPortion = 0.8) {
   
   print("---DATA HAS BEEN LOADED---")
 }
+loadData()

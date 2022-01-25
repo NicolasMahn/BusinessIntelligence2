@@ -50,4 +50,4 @@ loadPackages <- function() {
   
 }
 #>>>>>>> 7100ead48be8003834a41beb4c9ad8fd25aeb000
-
+loadPackages()

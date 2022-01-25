@@ -39,6 +39,7 @@ loadStyle <- function(){
   
   print("---STYLE HAS BEEN SET---")
 }
+loadStyle()
 
 
 
